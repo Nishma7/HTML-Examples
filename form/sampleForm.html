@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Validation</title>
+    <style>
+        #container {
+            margin: 0 auto;
+            width: 400px;
+            height: 300px;
+            border: 5px solid blue;
+            border-radius: 5%;
+            padding: 20px;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit=" return check()">
+        <div id="container">
+            <p><label for="fname">Full Name:</label>
+                <input  id="fname" name="fname" placeholder="benson">
+            </p>
+            <p><label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="your email">
+            </p>
+            <p><label for="mobileno">Mobile Number:</label>
+                <input id="mobileno" name="mobileno" placeholder="Enter your Mobile Number">
+            </p>
+            <p><input type="submit" id="submit" value="Submit"></p>
+            <p><input type="reset"  value="clear"></p>
+        </div>
+    </form>
+    <script>
+        function check() {
+            var fname = document.getElementById("fname").value;
+            var email = document.getElementById("email").value;
+            var mobileno = document.getElementById("mobileno").value;
+            var letters = /^[A-Z || a-z]+$/;
+            if (fname == "") {
+                alert("Please Enter Your Name");
+                return false;
+            }if(!fname.match(letters)){
+                alert("Please Enter The Alphabet Only");
+                return false;
+            }
+            if (email == "") {
+                alert("Please Enter Your Email");
+                return false;
+            }if(!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+                alert("Enter the Email in correct pattern");
+                return false;
+            }
+              if (mobileno == "") {
+                alert("Please Enter Your Phone Number");
+                return false;
+            }  if (!mobileno.match(/^\d+/)) {
+                alert("Use Only Numeric Values");
+                return false;
+            }if  (!mobileno.match(/^\d{10}$/)) {
+                alert("Use Only 10 Digits");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
