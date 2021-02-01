@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object constructors</title>
+</head>
+<body>
+    <p id="result"></p>
+    <p id="property"></p>
+    <p id="change"></p>
+    <script>
+        function personal(name,age,qualification){
+            this.name=name;
+            this.age=age;
+            this.qualification=qualification;
+        }
+        var me = new personal("Nishma",23,"BE");
+        document.getElementById("result").innerHTML=
+         "My Name is "+me.name+"."+"<br>"+"I am "+me.age+" years old.";
+
+         //Adding a Property to an Object
+         me.village="Kattuvilai";
+         document.getElementById("property").innerHTML=
+         "My village is "+ me.village;
+
+         //change the name
+
+         me.name="jeni";
+         document.getElementById("change").innerHTML=
+         "My name is "+me.name+".";
+
+    </script>
+    
+</body>
+</html>
