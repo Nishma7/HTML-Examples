@@ -20,7 +20,7 @@
     <form onsubmit=" return check()" autocomplete="off">
         <div id="container">
             <p><label for="fname">Full Name:</label>
-                <input  id="fname" name="fname" placeholder="benson">
+                <input id="fname" name="fname" placeholder="benson">
             </p>
             <p><label for="email">Email:</label>
                 <input type="text" id="email" name="email" placeholder="your email">
@@ -29,7 +29,7 @@
                 <input id="mobileno" name="mobileno" placeholder="Enter your Mobile Number">
             </p>
             <p><input type="submit" id="submit" value="Submit"></p>
-            <p><input type="reset"  value="clear"></p>
+            <p><input type="reset" value="clear"></p>
         </div>
     </form>
     <script>
@@ -41,24 +41,22 @@
             if (fname == "") {
                 alert("Please Enter Your Name");
                 return false;
-            }if(!fname.match(letters)){
+            } else if (!fname.match(letters)) {
                 alert("Please Enter The Alphabet Only");
                 return false;
-            }
-            if (email == "") {
+            } else if (email == "") {
                 alert("Please Enter Your Email");
                 return false;
-            }if(!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)){
+            } else if (!email.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
                 alert("Enter the Email in correct pattern");
                 return false;
-            }
-              if (mobileno == "") {
+            }else if (mobileno == "") {
                 alert("Please Enter Your Phone Number");
                 return false;
-            }  if (!mobileno.match(/^\d+/)) {
+            } else if (!mobileno.match(/^\d+/)) {
                 alert("Use Only Numeric Values");
                 return false;
-            }if  (!mobileno.match(/^\d{10}$/)) {
+            } else (!mobileno.match(/^\d{10}$/)) {
                 alert("Use Only 10 Digits");
                 return false;
             }
