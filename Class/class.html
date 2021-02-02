@@ -15,11 +15,18 @@
                 this.year = year;
             }
         }
+         //class methode:
+         age(){
+                var date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
         myBioData = new detail("Nishma", 1998);
         document.getElementById("result").innerHTML =
-            "My name is " + myBioData.name;
+            "My name is " + myBioData.name + ".";
         document.getElementById("year").innerHTML =
-            "I was born on 6th February " + myBioData.year;
+            "I was born on 6th February " + myBioData.year + 
+            ". I am "+myBioData.age()+" years old.";
     </script>
 
 </body>
