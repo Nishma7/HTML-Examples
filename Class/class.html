@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Class</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="year"></p>
+    <script>
+        class detail {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+        }
+        myBioData = new detail("Nishma", 1998);
+        document.getElementById("result").innerHTML =
+            "My name is " + myBioData.name;
+        document.getElementById("year").innerHTML =
+            "I was born on 6th February " + myBioData.year;
+    </script>
+
+</body>
+
+</html>
