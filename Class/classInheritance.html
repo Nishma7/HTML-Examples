@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Class Inheritance</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        class information {
+            constructor(name) {
+                this.name = name;
+        
+            }
+            details() {
+                return "My Name is " + this.name + ".";
+            }
+        }
+
+        class data extends information {
+            constructor(name, qualification) {
+                super(name);
+                this.qualification = qualification;
+            }
+            show() {
+                return this.details() + "My Qualification is " + this.qualification+".";
+            }
+
+        }
+
+        var studentData = new data("Nishma", "BE");
+        document.getElementById("result").innerHTML = studentData.show();
+
+
+    </script>
+
+</body>
+
+</html>
