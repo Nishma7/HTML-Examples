@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Getter and Setter Property</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+    
+class Flower 
+{
+    constructor() {
+        let name, colour;
+    }
+    getName() {
+        return this.name;
+    }
+    setName(name) {
+        this.name = name;
+    }
+    getColour() {
+        return this.colour;
+    }
+    setColour(colour) {
+        this.colour = colour;
+    }
+}
+
+let nature = new Flower();
+nature.setName("Jasmine");
+nature.setColour("White");
+document.getElementById("result").innerHTML= "I Like "+nature.getName()+".It is "+ nature.getColour()+" color.";
+</script>
+</body>
+</html>
