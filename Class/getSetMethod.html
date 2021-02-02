@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Getter and Setter Property</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        class Dog{
+            constructor(name){
+                this.dogname=name;
+            }
+            get dname(){
+               return this.dogname;
+        }
+        set dname(x){
+            this.dogname=x;
+
+        }
+    }
+    var myDog = new Dog("Judy");
+    document.getElementById("result").innerHTML = myDog.dogname;
+    </script>
+    </body>
+    </html>
