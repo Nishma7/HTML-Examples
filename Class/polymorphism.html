@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Polymorphism</title>
+</head>
+<body>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p> 
+    <script>
+        class Flower {
+            draw(){
+                return "This is the Flower.";
+            }
+        }
+
+        class Jasmine extends Flower{
+            draw(){
+                return "This is Jasmine Flower.";
+            }
+        }
+
+        class Rose extends Flower{
+            draw(){
+                return "This is Rose.";
+            }
+        }
+
+        var myFlower = new Flower();
+        document.getElementById("first").innerHTML = myFlower.draw();
+        myFlower = new Jasmine();
+        document.getElementById("second").innerHTML = myFlower.draw();
+        myFlower = new Rose();
+        document.getElementById("third").innerHTML = myFlower.draw();
+    </script>   
+</body>
+</html>
