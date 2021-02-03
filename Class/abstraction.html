@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Abstraction</title>
+</head>
+<body>
+    <p id="first"></p>
+    <p id="tmark"></p>
+    <script>
+        function Details(name,age,marks){
+            this.name = name;
+            this.age = age;
+            this.marks = marks;
+            this.internalMarks = 50;
+
+            this.totalMarks = function(){
+                 var total = this.marks+this.internalMarks;
+                 document.getElementById("tmark").innerHTML="Total mark is "+total;
+            }
+            
+
+            this.data = function(){
+            document.getElementById("first").innerHTML="Name : "+this.name + " | Age :"+this.age;
+            }
+
+        }
+        var mydetail = new Details("Nishma",23,100);
+        mydetail.data();
+        mydetail.totalMarks();
+    </script>
+    
+</body>
+</html>
