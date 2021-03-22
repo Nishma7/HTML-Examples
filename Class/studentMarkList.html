@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Mark List</title>
+</head>
+<body>
+    <p id="student"></p>
+    <p id="markDetails"></p>
+    <p id="talent"></p>
+    
+    <script>
+        class Student{
+            constructor(name,phoneNo,address){
+                this.name = name;
+                this.phoneNo = phoneNo;
+                this.address = address;
+            }
+            details(){
+                return this.name+"<br>"+this.phoneNo+"<br>"+this.address;
+            }
+        }
+
+        class Marks extends Student{
+            constructor(name,phoneNo,address,m1,m2,m3,m4,m5){
+                super(name,phoneNo,address);
+                this.mark1 = m1;
+                this.mark2 = m2;
+                this.mark3 = m3;
+                this.mark4 = m4;
+                this.mark5 = m5;
+            }
+            print(){
+                return this.details()+"<br>"+"mark1:"+this.mark1+"<br>"+"mark2:"+this.mark2+"<br>"+"mark3:"+this.mark3+"<br>"+"mark4:"+this.mark4+"<br>"+"mark5:"+this.mark5;
+            }
+
+        }
+
+        class Sports extends Marks{
+            constructor(name,phoneNo,address,m1,m2,m3,m4,m5,sports,records,height,weight){
+                super(name,phoneNo,address,m1,m2,m3,m4,m5);
+                this.sports=sports;
+                this.records=records;
+                this.height=height;
+                this.weight=weight;
+            }
+            extra(){
+                return this.print()+"<br>"+"Sports name:"+this.sports+"<br>"+"Recods:"+this.records+"<br>"+"Height:"+this.height+"<br>"+"Weight:"+this.weight;
+            }
+        }
+    var informations = new Student("Bhuvaneshvar",9486506108,"UttarPradesh");
+    var markList = new Marks("Bhuvaneshvar",9486506108,"UttarPradesh",90,98,86,100,99);
+    var activity = new Sports("Bhuvaneshvar",9486506108,"UttarPradesh",90,98,86,100,99,"Cricket",75.04,"6 feet",70);
+    document.getElementById("student").innerHTML=informations.details();
+    document.getElementById("markDetails").innerHTML=markList.print();
+    document.getElementById("talent").innerHTML=activity.extra();
+    
+    </script>
+    
+</body>
+</html>
